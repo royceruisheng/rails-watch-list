@@ -1,3 +1,8 @@
 <div class="container">
   <%= render @list %>
+    <%= link_to "Add a new movie", new_list_bookmark_path(@list), class: "btn btn-primary" %>
+    <%= link_to "Return to all lists", lists_path, class: "btn btn-secondary" %>
+  <div class="row">
+    <%= render @list.bookmarks %>
+  </div>
 </div>

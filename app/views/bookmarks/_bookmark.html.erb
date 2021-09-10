@@ -1,0 +1,13 @@
+<div class="col-4">
+  <div class="card">
+    <%= image_tag(bookmark.movie.poster_url)%>
+    <h3><strong><%= bookmark.movie.title %></strong></h3>
+    <p><%= bookmark.movie.rating %> ⭐️</p>
+    <small><%= bookmark.movie.overview %></small>
+
+    <div class="d-flex justify-content-between">
+      <p class="lead"><i class="fas fa-quote-left"></i><%= bookmark.comment %><i class="fas fa-quote-right"></i></p>
+      <%= link_to "Delete", bookmark_path(bookmark), method: :delete, data: { confirm: "Are you sure?" }, class: "btn btn-warning" %>
+    </div>
+  </div>
+</div>
