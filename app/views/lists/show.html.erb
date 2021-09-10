@@ -5,4 +5,9 @@
   <div class="row">
     <%= render @list.bookmarks %>
   </div>
+  <%= simple_form_for [@list, @bookmark] do |f| %>
+    <%= f.association :movie, prompt: "Choose the movie to bookmark" %>
+    <%= f.input :comment %>
+    <%= f.button :submit, class: "btn btn-primary" %>
+  <% end %>
 </div>
