@@ -1,4 +1,5 @@
 Rails.application.routes.draw do
+  root to: 'lists#index'
   get 'bookmarks/new'
   get 'bookmarks/create'
   get 'bookmarks/destroy'
